@@ -1,0 +1,17 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:AvaloniaUIMVVM.ViewModels"
+        x:Class="AvaloniaUIMVVM.Views.MainWindow"
+        Title="My Avalonia App" Height="600" Width="450"
+        x:DataType = "local:MainWindowViewModel">
+    <Grid>
+        <Label Content="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Text="{Binding Message}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,10" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20">
+            <Button Content="OK" HorizontalAlignment="Center" Width="50" Margin="5" 
+                    Command="{Binding OkCommand}" />
+            <Button Content="Exit" HorizontalAlignment="Center" Width="50" Margin="5" 
+                    Command="{Binding ExitCommand}" />
+        </StackPanel>
+    </Grid>
+</Window>
